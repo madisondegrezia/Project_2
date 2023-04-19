@@ -46,8 +46,8 @@ app.get('/v1/api/posts', (req, res) => {
 });
 
 app.post('/v1/api/posts', upload.none(), (req, res) => {
-  const { title, content } = req.body;
-  if (!title || !content) {
+  const { title, author, content } = req.body;
+  if (!title || !content || !author) {
     res.status(400).json({
       error: 'Title and content are required',
     });
@@ -75,6 +75,7 @@ app.post('/v1/api/posts', upload.none(), (req, res) => {
     const newPost = {
       id: newId,
       title,
+      author,
       content,
       last_updated: new Date().toISOString(),
       originally_published: new Date().toISOString(),
@@ -121,9 +122,9 @@ app.get('/v1/api/posts/:id', (req, res) => {
 
 app.patch('/v1/api/posts/:id', upload.none(), (req, res) => {
   const { id } = req.params;
-  const { title, content } = req.body;
+  const { title, author, content } = req.body;
 
-  if (!title && !content) {
+  if (!title && !content && !author) {
     res.status(400).json({
       error: 'Title or content is required',
     });
@@ -150,6 +151,9 @@ app.patch('/v1/api/posts/:id', upload.none(), (req, res) => {
 
     if (title) {
       post.title = title;
+    }
+    if (author) {
+      post.author = author;
     }
     if (content) {
       post.content = content;
