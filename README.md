@@ -19,11 +19,11 @@ The following routes at a minimum:
 * CREATE/UPDATE:
   * /create – a form to add a blog post
   * /blog/{ID}/edit
-*Ability to perform all 4 CRUD operations for blog posts: create, read, update, delete
-*When viewing a blog post, display the last updated, originally published dates along with the blog post’s content
-*A loading state for when the app is retrieving the content
-*Unit tests for each component
-*Use ESLint along with Prettier for code quality and consistency.
+* Ability to perform all 4 CRUD operations for blog posts: create, read, update, delete
+* When viewing a blog post, display the last updated, originally published dates along with the blog post’s content
+* A loading state for when the app is retrieving the content
+* Unit tests for each component
+* Use ESLint along with Prettier for code quality and consistency.
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/89614960/232974560-a58f3202-fa25-432d-b639-98249ee47c92.png" width=60% height=60%>
