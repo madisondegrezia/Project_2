@@ -38,3 +38,7 @@ The above image shows the create page, where a user can write a blog post to upl
 
 The above image shows a specific blog post that a user clicked on, giving them the option to edit or delete the post.
 
+<img src="https://user-images.githubusercontent.com/89614960/232977808-08811cfc-eddf-4a93-8eef-00528b0894db.png" width=60% height=60%>
+
+The above image shows the confirmation page that pops up to verify that the user wants to delete the blog post from the website.
+
